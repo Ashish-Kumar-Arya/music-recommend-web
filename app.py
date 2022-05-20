@@ -1,7 +1,7 @@
+import webbrowser
 import streamlit as st
 import pickle
 st.title('Song Recommender System')
-
 def recommend(song):
     song_index = songs[songs['song']==song].index[0]
     distances = similarity[song_index]
@@ -27,6 +27,9 @@ if st.button('Recommend'):
     recommendations = recommend(selected_song)
     for i in recommendations:
         st.write(i)
+        ws = "%20".join(i.split())
+        link = (f"https://www.google.com/search?q={ws}")
+        st.markdown(link, unsafe_allow_html=False)
 
 
 
