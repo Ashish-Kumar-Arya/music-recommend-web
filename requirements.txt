@@ -1,3 +1,2 @@
-streamlit
-requests
+streamlit==1.9.0
 gunicorn
