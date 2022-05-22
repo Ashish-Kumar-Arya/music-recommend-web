@@ -25,6 +25,11 @@ songs_list)
 
 if st.button('Recommend'):
     recommendations = recommend(selected_song)
+    st.header(f"Selected Song: {selected_song}")
+    sws = "%20".join(selected_song.split())
+    slink = (f"https://www.google.com/search?q={sws}")
+    st.markdown(slink, unsafe_allow_html=False)
+    st.header("Recommendations:")
     for i in recommendations:
         st.write(i)
         ws = "%20".join(i.split())

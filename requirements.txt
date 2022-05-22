@@ -1,6 +1,0 @@
-streamlit==1.9.0
-gunicorn
-pandas
-numpy
-scikit-learn==1.0.2
-sklearn==0.0
